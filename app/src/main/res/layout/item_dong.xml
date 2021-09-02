@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.043"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.043"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23"/>
+
+    <ImageView
+        android:layout_marginTop="10sp"
+        android:id="@+id/img"
+        app:layout_constraintStart_toStartOf="@id/guiLeft"
+        app:layout_constraintTop_toTopOf="@id/guiTop"
+        app:layout_constraintEnd_toEndOf="@id/guiRight"
+        android:layout_width="0dp"
+        android:src="@drawable/img1"
+        android:layout_height="76dp"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiRightAll"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.8"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiLeft_txt"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="10sp"
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Mua bán có tâm"
+        app:layout_constraintTop_toTopOf="@id/guiTop"
+        app:layout_constraintStart_toStartOf="@id/guiLeft_txt"
+        app:layout_constraintEnd_toEndOf="@id/guiRightAll"/>
+    <TextView
+        android:id="@+id/txtFan"
+        android:layout_marginTop="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8k Fan"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guiLeft_txt"
+        app:layout_constraintTop_toBottomOf="@id/txtName"/>
+    <TextView
+        android:id="@+id/txtBaiViet"
+        android:layout_width="0dp"
+        android:layout_marginTop="5sp"
+        android:layout_height="wrap_content"
+        android:text="+ 10 bài viết mới nhất"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintStart_toEndOf="@id/txtFan"
+        app:layout_constraintEnd_toEndOf="@id/guiRightAll"
+        app:layout_constraintTop_toBottomOf="@id/txtName"/>
+    <TextView
+        android:id="@+id/txtNhom"
+        android:text="NHÓM ĐÓNG"
+        android:textColor="#FF9500"
+        android:textSize="13sp"
+        android:layout_marginTop="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtFan"
+        app:layout_constraintStart_toStartOf="@id/guiLeft_txt"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
